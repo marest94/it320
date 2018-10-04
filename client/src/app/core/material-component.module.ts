@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import{
+import {
   MatCheckboxModule,
   MatButtonModule,
   MatInputModule,
@@ -29,9 +29,9 @@ import{
   MatSnackBarModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
-} from "@angular/material"
-
+  MatPaginatorModule,
+  MatBadgeModule
+} from "@angular/material";
 
 @NgModule({
   imports: [
@@ -64,7 +64,8 @@ import{
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatBadgeModule
   ],
   exports: [
     MatCheckboxModule,
@@ -97,6 +98,8 @@ import{
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule]
+    MatPaginatorModule,
+    MatBadgeModule
+  ]
 })
 export class MaterialComponentModule {}
