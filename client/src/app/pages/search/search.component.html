@@ -1,0 +1,33 @@
+
+
+<mat-card class="result">
+    <mat-card-content>
+      <h2 class="example-h2">Choose search criteria</h2>
+      <div>
+<h1>Show ages: </h1>          <mat-form-field class="example-margin">
+              <input matInput type="number" placeholder="Value" [(ngModel)]="value">
+            </mat-form-field>
+        </div>
+     <div>
+        <mat-slider
+        class="example-margin"
+        [max]="100"
+        [min]="18"
+        [step]="step"
+        [(ngModel)]="value"
+        >
+    </mat-slider>
+     </div>
+     <div>
+       <h1>Show me:</h1>
+       <mat-slide-toggle [checked]="men">Men</mat-slide-toggle>
+       <mat-slide-toggle [checked]="women">Women</mat-slide-toggle>
+
+     </div>
+     <div>
+       Proseri se ovde za sta su ova podesavanja
+     </div>
+
+     <button mat-button >Search</button>
+    </mat-card-content>
+  </mat-card>

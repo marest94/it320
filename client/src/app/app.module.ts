@@ -11,6 +11,7 @@ import { ForgotPasswordComponent } from './pages/authentication/forgot-password/
 import { FooterComponent } from './pages/layout/footer/footer.component';
 import { HeaderComponent } from './pages/layout/header/header.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RegisterComponent } from './pages/authentication/register/register.comp
     ForgotPasswordComponent,
     FooterComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
