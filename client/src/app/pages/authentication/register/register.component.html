@@ -1,0 +1,135 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="basicInfoGroup">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>You are just a few clicks away from meeting awesome people</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" [formGroup]="basicInfoGroup">
+          <ng-template matStepLabel>Step 1: Basic Information</ng-template>
+
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="First name" name="firstName" formControlName="firstName" required>
+                </mat-form-field>
+              </td>
+
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Last name" name="lastName" formControlName="lastName" required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Email" type="email" name="email" formControlName="email" required>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="Re-enter Email" type="email" name="reEmail" formControlName="reEmail"
+                    required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="Birthday" formControlName="birthday">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-radio-group formControlName="gender">
+                  <mat-radio-button value="M">Male</mat-radio-button>
+                  <mat-radio-button value="F">Female</mat-radio-button>
+                </mat-radio-group>
+              </td>
+            </tr>
+          </table>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </mat-step>
+
+  <mat-step [stepControl]="locationGroup">
+    <form [formGroup]="locationGroup">
+      <ng-template matStepLabel>Step 2: Location</ng-template>
+      <mat-form-field>
+        <input matInput placeholder="Country" formControlName="country" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="City" formControlName="city" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+
+  <mat-step [stepControl]="profileGroup">
+    <form [formGroup]="profileGroup">
+      <ng-template matStepLabel>Step 3: Profile picture, username and password </ng-template>
+      <!-- Add image upload-->
+      <img src="../../../../assets/face.png" alt="">
+      <mat-form-field>
+        <input matInput placeholder="Username" formControlName="username" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" formControlName="password" type="password" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Re-enter password" formControlName="rePassword" type="password" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <mat-step>
+
+    <form [formGroup]="detailsGroup" >
+        <ng-template matStepLabel>Final step: Adding some details and confirmation</ng-template>
+        <mat-form-field>
+          <textarea matInput placeholder="Details about yourself" formControlName="details" ></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Education" formControlName="education">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Relationship status" formControlName="status" >
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="Your hobbies" formControlName="hobbies" ></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="Your likes" formControlName="likes" ></textarea>
+            </mat-form-field>
+            <mat-form-field>
+              <textarea matInput placeholder="Your dislikes" formControlName="dislikes" ></textarea>
+            </mat-form-field>
+            <p>Interested in:</p>
+            
+    <section class="example-section">
+        <mat-checkbox class="example-margin" >Men</mat-checkbox>
+        <mat-checkbox class="example-margin">Woman</mat-checkbox>
+      </section>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button >Register!</button>
+              </div>
+
+    </form>
+    </mat-step>
+  </mat-horizontal-stepper>

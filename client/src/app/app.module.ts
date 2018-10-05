@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from './core/material-component.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout'
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { AppRoutingModule } from './core/app-routing.module';
 import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
 import { FooterComponent } from './pages/layout/footer/footer.component';
 import { HeaderComponent } from './pages/layout/header/header.component';
+import { RegisterComponent } from './pages/authentication/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HeaderComponent } from './pages/layout/header/header.component';
     LoginComponent,
     ForgotPasswordComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { HeaderComponent } from './pages/layout/header/header.component';
     BrowserAnimationsModule,
     MaterialComponentModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
