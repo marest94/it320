@@ -11,8 +11,10 @@ import { ForgotPasswordComponent } from './pages/authentication/forgot-password/
 import { FooterComponent } from './pages/layout/footer/footer.component';
 import { HeaderComponent } from './pages/layout/header/header.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
-import { SearchComponent } from './pages/search/search.component';
-import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
+import { SearchComponent } from './pages/user/search/search.component';
+import { EditProfileComponent } from './pages/user/edit-profile/edit-profile.component';
+import { UsersComponent } from './pages/admin/users/users.component';
+import { ReportsComponent } from './pages/admin/reports/reports.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { EditProfileComponent } from './pages/edit-profile/edit-profile.componen
     HeaderComponent,
     RegisterComponent,
     SearchComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ReportsComponent,
+    UsersComponent,
+    ReportsComponent
   ],
   imports: [
     BrowserModule,

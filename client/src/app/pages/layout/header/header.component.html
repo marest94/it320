@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span><img src="./assets/logo.png"></span>
+      <span  routerLink="">Logo</span>
       <span class="example-fill-remaining-space"></span>
       <span class="align-center"></span>
       <span class="example-spacer"></span>
@@ -9,7 +9,6 @@
         <mat-icon matBadge="15" matBadgeColor="warn" matBadgePosition="below after">settings</mat-icon>
       </button>
 
-
       <button mat-icon-button> <mat-icon>chat_bubble</mat-icon>
     </button>
     <button mat-icon-button> <mat-icon>notifications</mat-icon></button>
@@ -17,12 +16,13 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <mat-menu #menu="matMenu" >
+
+  <mat-menu #menu="matMenu" id="proba" >
   <button mat-menu-item>
     <mat-icon>face</mat-icon>
     <span>View your profile</span>
   </button>
-  <button mat-menu-item>
+  <button mat-menu-item  routerLink="/edit-profile">
     <mat-icon>edit</mat-icon>
     <span>Edit your profile</span>
   </button>
