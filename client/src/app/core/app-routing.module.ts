@@ -4,13 +4,16 @@ import { LoginComponent } from '../pages/authentication/login/login.component';
 import { ForgotPasswordComponent } from '../pages/authentication/forgot-password/forgot-password.component';
 import { RegisterComponent } from '../pages/authentication/register/register.component';
 import { SearchComponent } from '../pages/search/search.component';
+import { EditProfileComponent } from '../pages/edit-profile/edit-profile.component';
 
 
 const routes: Routes = [
   {path : '', component : LoginComponent},
-  {path: 'reset_password', component : ForgotPasswordComponent},
+  {path: 'reset-password', component : ForgotPasswordComponent},
   {path: 'register', component : RegisterComponent},
-  {path: 'search', component : SearchComponent}
+  {path: 'search', component : SearchComponent},
+  {path: 'edit-profile', component : EditProfileComponent}
+
 
 ];
 @NgModule({

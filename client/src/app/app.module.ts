@@ -12,6 +12,7 @@ import { FooterComponent } from './pages/layout/footer/footer.component';
 import { HeaderComponent } from './pages/layout/header/header.component';
 import { RegisterComponent } from './pages/authentication/register/register.component';
 import { SearchComponent } from './pages/search/search.component';
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchComponent } from './pages/search/search.component';
     FooterComponent,
     HeaderComponent,
     RegisterComponent,
-    SearchComponent
+    SearchComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

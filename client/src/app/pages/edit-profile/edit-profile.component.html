@@ -1,0 +1,146 @@
+<h1>Edit profile</h1>
+<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">info</mat-icon>
+        Basic information
+
+      </ng-template>
+      <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Change your basic infromation</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <form class="example-form" [formGroup]="basicInfoGroup">    
+              <table class="example-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="First name" name="firstName" formControlName="firstName" required>
+                    </mat-form-field>
+                  </td>
+    
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Last name" name="lastName" formControlName="lastName" required>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Email" type="email" name="email" formControlName="email" required>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Re-enter Email" type="email" name="reEmail" formControlName="reEmail"
+                        required>
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <mat-form-field>
+                      <input matInput [matDatepicker]="picker" placeholder="Birthday" formControlName="birthday">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-radio-group formControlName="gender">
+                      <mat-radio-button value="M">Male</mat-radio-button>
+                      <mat-radio-button value="F">Female</mat-radio-button>
+                    </mat-radio-group>
+                  </td>
+                  <td>
+                      <mat-form-field>
+                          <input matInput placeholder="Password" formControlName="password" type="password" required>
+                        </mat-form-field>
+                        <mat-form-field>
+                          <input matInput placeholder="Re-enter password" formControlName="rePassword" type="password" required>
+                        </mat-form-field>
+                  </td>
+                </tr>
+              </table>
+              <div>
+                <button mat-button >Save changes</button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+    </mat-tab>
+  
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">location_on</mat-icon>
+         Location
+      </ng-template>
+      <form [formGroup]="locationGroup">
+          <mat-form-field>
+            <input matInput placeholder="Country" formControlName="country" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="City" formControlName="city" required>
+          </mat-form-field>
+          <div>
+
+            <button mat-button>Save changes</button>
+          </div>
+        </form>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">image</mat-icon>
+          Images
+        </ng-template>
+        Upload images
+        </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="example-tab-icon">details</mat-icon>
+        Details
+      </ng-template>
+      <form [formGroup]="detailsGroup" >
+          <mat-form-field>
+            <textarea matInput placeholder="Details about yourself" formControlName="details" ></textarea>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Education" formControlName="education">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Relationship status" formControlName="status" >
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput placeholder="Your hobbies" formControlName="hobbies" ></textarea>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput placeholder="Your likes" formControlName="likes" ></textarea>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput placeholder="Your dislikes" formControlName="dislikes" ></textarea>
+              </mat-form-field>
+              <p>Interested in:</p>
+              
+      <section class="example-section">
+          <mat-checkbox class="example-margin" >Men</mat-checkbox>
+          <mat-checkbox class="example-margin">Woman</mat-checkbox>
+        </section>
+              <div>
+
+                  <button mat-button >Save changes</button>
+                </div>
+  
+      </form>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">delete_forever</mat-icon>
+          Delete account
+
+        </ng-template>
+       <h1>Are you sure that you want to delete your account?</h1>
+       <button mat-raised-button color="warn">Delete my account</button>
+
+      </mat-tab>
+  </mat-tab-group>
