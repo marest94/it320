@@ -5,14 +5,24 @@ import { ForgotPasswordComponent } from '../pages/authentication/forgot-password
 import { RegisterComponent } from '../pages/authentication/register/register.component';
 import { SearchComponent } from '../pages/user/search/search.component';
 import { EditProfileComponent } from '../pages/user/edit-profile/edit-profile.component';
+import { ReportsComponent } from '../pages/admin/reports/reports.component';
+import { UsersComponent } from '../pages/admin/users/users.component';
+import { AuthenticationService } from '../services/authentication.service';
 
 
 const routes: Routes = [
   {path : '', component : LoginComponent},
   {path: 'reset-password', component : ForgotPasswordComponent},
   {path: 'register', component : RegisterComponent},
-  {path: 'search', component : SearchComponent},
-  {path: 'edit-profile', component : EditProfileComponent}
+  {path: 'user/search', component : SearchComponent, canActivate: [AuthenticationService],
+},
+  {path: 'user/edit-profile', component : EditProfileComponent,     canActivate: [AuthenticationService],
+},
+  {path: 'admin/reports', component : ReportsComponent,     canActivate: [AuthenticationService],
+},
+  {path: 'admin/users', component : UsersComponent,     canActivate: [AuthenticationService],
+}
+
 
 
 ];

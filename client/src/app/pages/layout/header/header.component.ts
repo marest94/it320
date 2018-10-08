@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  role: "user";
+  public role: String = 'admin';
   constructor() { }
 
   ngOnInit() {

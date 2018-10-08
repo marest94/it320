@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from './core/material-component.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {FlexLayoutModule} from '@angular/flex-layout'
+import {FlexLayoutModule} from '@angular/flex-layout';
 import { LoginComponent } from './pages/authentication/login/login.component';
 import { AppRoutingModule } from './core/app-routing.module';
 import { ForgotPasswordComponent } from './pages/authentication/forgot-password/forgot-password.component';
@@ -15,6 +15,7 @@ import { SearchComponent } from './pages/user/search/search.component';
 import { EditProfileComponent } from './pages/user/edit-profile/edit-profile.component';
 import { UsersComponent } from './pages/admin/users/users.component';
 import { ReportsComponent } from './pages/admin/reports/reports.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ReportsComponent } from './pages/admin/reports/reports.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
